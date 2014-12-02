@@ -46,7 +46,7 @@ Running SassUnit using `bundle exec` will ensure it uses the version of Sass def
 
 ## Contributing
 
-1. Fork it ( https://github.com/penman/sassunit/fork )
+1. [Fork it](https://github.com/penman/sassunit/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
