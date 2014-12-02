@@ -10,3 +10,7 @@ ARGV.each do |path|
     SassUnit.test(nil, files: path)
   end
 end
+
+if ARGV.empty?
+  SassUnit.test
+end
