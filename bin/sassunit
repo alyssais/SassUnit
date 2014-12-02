@@ -3,6 +3,17 @@
 require "pathname"
 require "sassunit"
 
+if File.exist?("Gemfile") && !(ENV["BUNDLE_GEMFILE"] || ENV["RUBYGEMS_GEMDEPS"])
+  puts <<-EOF
+WARNING: it looks like you're running sassunit outside of Bundler.
+It is important to run sassunit with Bundler to ensure the correct version of Sass is being tested.
+
+To silence this warning and run tests using Bundler, try running this instead:
+  EOF
+  puts "  bundle exec sassunit " + $*.join(" ")
+  puts
+end
+
 ARGV.each do |path|
   if Pathname.new(path).directory?
     SassUnit.test(path)
