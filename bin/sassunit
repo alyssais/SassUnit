@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require "pathname"
+require "sassunit"
+
+ARGV.each do |path|
+  if Pathname.new(path).directory?
+    SassUnit.test(path)
+  else
+    SassUnit.test(nil, files: path)
+  end
+end
