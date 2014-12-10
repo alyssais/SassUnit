@@ -51,3 +51,7 @@ Running SassUnit using `bundle exec` will ensure it uses the version of Sass def
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+---
+
+[You can follow me on Twitter.](https://twitter.com/PenmanRoss)
