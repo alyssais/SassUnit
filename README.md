@@ -44,6 +44,10 @@ $ bundle exec sassunit ~/projects/another_project # do not include /test
 
 Running SassUnit using `bundle exec` will ensure it uses the version of Sass defined in your project’s Gemfile. This can be useful for ensuring that tests still pass with the minimum supported Sass version for your project.
 
+## Projects using SassUnit
+
+My [Sass-Web-Fonts](https://github.com/penman/Sass-Web-Fonts) library has a comprehensive test suite using SassUnit. If you have a project using SassUnit you should [submit a pull request](https://github.com/penman/SassUnit/edit/master/README.md) and I'll probably add it here.
+
 ## Contributing
 
 1. [Fork it](https://github.com/penman/sassunit/fork)
