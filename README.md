@@ -55,3 +55,7 @@ My [Sass-Web-Fonts](https://github.com/penman/Sass-Web-Fonts) library has a comp
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+---
+
+[You can follow me on Twitter.](https://twitter.com/PenmanRoss)
