@@ -5,7 +5,7 @@ require 'sassunit/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "sassunit"
-  spec.version       = Sassunit::VERSION
+  spec.version       = SassUnit::VERSION
   spec.authors       = ["Alyssa Ross"]
   spec.email         = ["hi@alyssa.is"]
   spec.summary       = %q{A tiny Sass unit testing library.}
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "sass"
+  spec.add_dependency "commander"
   spec.add_dependency "minitest"
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
