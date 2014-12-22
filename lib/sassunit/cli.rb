@@ -9,18 +9,18 @@ module SassUnit
       configure_with_gemspec
 
       command :test do |c|
-        c.syntax = "#{File.basename($0)} test [files]"
-        c.description = "tests specified Sass files"
+        c.description = "Tests specified Sass files"
         c.action do |args, options|
           require "sassunit"
           args[0] ||= "."
           args.each do |path|
             if Pathname.new(path).directory?
-              SassUnit.test(path)
+              SassUnit.add_test(path)
             else
-              SassUnit.test(nil, files: [path])
+              SassUnit.add_test(nil, files: [path])
             end
           end
+          SassUnit.run_tests
         end
       end
       default_command :test
