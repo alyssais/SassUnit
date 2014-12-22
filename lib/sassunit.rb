@@ -15,14 +15,16 @@ module SassUnit
 
       describe file do
         it "compiles correctly" do
-          expected = file.sub(/\.s[ac]ss/, ".css")
+          expected_file = file.sub(/\.s[ac]ss/, ".css")
 
-          [file, expected].each do |f|
+          [file, expected_file].each do |f|
             assert File.exists?(f), "#{f} does not exist"
           end
 
-          css = Sass.compile(open(file).read, filename: file)
-          css.must_equal open(expected).read
+          compiled = Sass.compile(open(file).read, filename: file)
+          # compile the CSS file as SCSS so it's formatted the same
+          expected = Sass.compile(open(expected_file).read, filename: file)
+          compiled.must_equal expected
         end
       end
 
