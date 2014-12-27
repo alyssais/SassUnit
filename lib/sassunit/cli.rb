@@ -1,4 +1,4 @@
-require "sassunit/version"
+require "sassunit/info"
 require "commander"
 
 module SassUnit
@@ -6,7 +6,9 @@ module SassUnit
     include Commander::Methods
 
     def run
-      configure_with_gemspec
+      program :name, SassUnit::NAME
+      program :version, SassUnit::VERSION
+      program :description, SassUnit::DESCRIPTION
 
       command :test do |c|
         c.description = "Tests specified Sass files"
@@ -26,20 +28,6 @@ module SassUnit
       default_command :test
 
       run!
-    end
-
-    private
-
-    def configure_with_gemspec
-      program :name, gemspec.name
-      program :version, gemspec.version.to_s
-      program :description, gemspec.summary
-    end
-
-    def gemspec
-      base_dir = Pathname.new("#{File.dirname(__FILE__)}")
-      base_dir = base_dir.parent until path = Dir[base_dir + "*.gemspec"].first
-      @gemspec ||= Gem::Specification.load(path)
     end
   end
 end
