@@ -1,14 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'sassunit/version'
+require 'sassunit/info'
 
 Gem::Specification.new do |spec|
-  spec.name          = "sassunit"
+  spec.name          = SassUnit::NAME
   spec.version       = SassUnit::VERSION
   spec.authors       = ["Ross Penman"]
   spec.email         = ["ross@pen.mn"]
-  spec.summary       = %q{A tiny Sass unit testing library.}
+  spec.summary       = SassUnit::DESCRIPTION
   spec.homepage      = ""
   spec.license       = "MIT"
 
