@@ -23,9 +23,10 @@ module SassUnit
 
           return assert false, "expected files do not exist" unless files_exist
 
-          compiled = Sass.compile(open(file).read, filename: file)
+          opts = { filename: file, style: :compressed }
+          compiled = Sass.compile(open(file).read, opts)
           # compile the CSS file as SCSS so it's formatted the same
-          expected = Sass.compile(open(expected_file).read, filename: file)
+          expected = Sass.compile(open(expected_file).read, opts)
           compiled.must_equal expected
         end
       end
