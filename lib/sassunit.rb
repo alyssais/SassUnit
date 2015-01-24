@@ -17,9 +17,11 @@ module SassUnit
         it "compiles correctly" do
           expected_file = file.sub(/\.s[ac]ss/, ".css")
 
-          [file, expected_file].each do |f|
-            assert File.exists?(f), "#{f} does not exist"
+          files_exist = [file, expected_file].inject(true) do |acc, file|
+            acc && File.exists?(file)
           end
+
+          return assert false, "expected files do not exist" unless files_exist
 
           compiled = Sass.compile(open(file).read, filename: file)
           # compile the CSS file as SCSS so it's formatted the same
