@@ -7,7 +7,7 @@ MiniTest.backtrace_filter = SassUnit::BacktraceFilter.new
 module SassUnit
   module_function
 
-  def add_test(directory = ".", files: nil)
+  def add_test(directory = ".", files = nil)
     Sass.load_paths << directory
 
     files ||= Dir.glob("#{directory}/test/**/*.s{a,c}ss")

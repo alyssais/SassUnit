@@ -19,7 +19,7 @@ module SassUnit
             if Pathname.new(path).directory?
               SassUnit.add_test(path)
             else
-              SassUnit.add_test(nil, files: [path])
+              SassUnit.add_test(nil, [path])
             end
           end
           SassUnit.run_tests
