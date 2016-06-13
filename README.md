@@ -2,7 +2,7 @@
 
 A tiny Ruby utility for testing Sass libraries by comparing compiled output of short Sass tests to the expected CSS output.
 
-For more information about the motivation and rationale behind SassUnit, read my [introductory article](http://alyssa.is/testing-sass/), but, in short:
+For more information about the motivation and rationale behind SassUnit, read my [introductory article](http://alyssa.is/testing-sass), but, in short:
 
 * Prevents old functionality being accidentally broken by new changes
 * Easy to learn and use
